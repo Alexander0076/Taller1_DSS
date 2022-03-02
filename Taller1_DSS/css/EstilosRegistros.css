@@ -1,0 +1,26 @@
+.form{
+    margin-top: 5%;
+    width: 25%;
+    border: 1px solid;
+    border-radius: 5%;
+    border-color: #bfbfbf;
+    padding: 1%;
+}
+.formularioR{
+    margin-top: 5%;
+}
+.text{
+    text-align: center;
+}
+.imgLogo{
+    margin-left:25% ;
+}
+.titulo{
+    text-align: center;
+    font-size: 12px;
+}
+.info{
+    text-align: justify;
+    font-size: 12px;
+    margin-left: 0%;
+}
