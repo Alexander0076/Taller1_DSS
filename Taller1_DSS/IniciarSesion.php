@@ -36,6 +36,8 @@
             <div class="d-flex justify-content-center pt-4">
             <button type="submit" class="btn-lg btn-primary rounded-pill" name="ingresar">Ingresar</button>
             </div>
+        </form>
+</div>
 </head>
 <nav></nav>
 <section></section>

@@ -15,4 +15,14 @@ body {
     width: 350px;
   }
   
-  
+  .EventosForm {
+    background-color: #15172b;
+    border-radius: 20px;
+    box-sizing: border-box;
+    height: 550px;
+    padding: 20px;
+    width: 350px;
+  }
+  .texta{
+    border-radius: 5%;
+  }

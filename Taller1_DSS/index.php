@@ -22,6 +22,7 @@ if($varsesion == null||$varsesion=''){
   <a class="navbar-brand">
   <h2>Bienvenido <?php echo $_SESSION['Usuario'] ?></h2>
   </a>
+  <a href="NuevosEventos.php">Crear Eventos</a>
   
   <a class="nav-link" href="CerrarSesion.php">Cerrar Sesion </a>
 </nav>
