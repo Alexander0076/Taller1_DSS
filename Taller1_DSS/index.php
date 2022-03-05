@@ -1,11 +1,20 @@
 <?php
+
 session_start();
+$Data = array();
 
 $varsesion=$_SESSION['Usuario'];
 
 if($varsesion == null||$varsesion=''){
     header("Location:IniciarSesion.php");
 }
+if (isset($_COOKIE['Eventos'])) {
+  $Data = json_decode($_COOKIE['Eventos'],true);
+}else{
+  setcookie('Eventos',json_encode(array()));
+}  
+
+
 ?>
 
 <!DOCTYPE html>
@@ -29,6 +38,38 @@ if($varsesion == null||$varsesion=''){
 <header>
 
 </header>
+<nav></nav>
+<section>
+  <?php 
+  $showEventos = array();
+  foreach ($Data as $items => $value) {
+    if ($_SESSION['Usuario']  == $value[0]) {
+        array_push($showEventos,$value);
+    }
+  }   
+    foreach ($showEventos as $key => $value) {
+      echo "<div>
+      <div>
+        <p>Titulo eventos: $value[1]</p>
+      </div>
+      <div></div>
+      <a href='Eliminar.php?evnt=$value[1]'><button>Eliminar</button></a>
+      <a href='Actualizar.php?evnt=$value[1]'><button>Actualizar</button></a>
+      </div>";
+    }
+  
+  
+  ?>
+  <div>
+    <div>
+      
+    </div>
+    <div>
+
+    </div>
+  </div>
+
+</section>
     
 </body>
 </html>

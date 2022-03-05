@@ -1,25 +1,27 @@
 <?php 
-    $Usuario = $_POST[''];
+    session_start();
+    $Data = array();
+    $showEventos = array();
+    $Usuario = $_SESSION['Usuario'];
     $TituloEvento = $_POST['titulo'];
-     if($TituloEvento != null){
-        
-    }else{
-        $errorTitulo = "Ingrese un titulo";
-        include_once 'NuevosEventos.php';
-    }
     $FechaEvento = $_POST['fecha'];
-    if($FechaEvento != null){
-        
-    }else{
-        $errorFecha = "Seleccione una fecha";
-        include_once 'NuevosEventos.php';
-    }
     $DescripcionEvento = $_POST['descripcion'];  
-    if($DescripcionEvento != null){
-        
+    if (isset($_COOKIE['Eventos'])) {
+        $Data = json_decode($_COOKIE['Eventos'],true);
     }else{
-        $errorDes = "Agrege una descripcion";
-        include_once 'NuevosEventos.php';
+        setcookie('Eventos',json_encode(array()));
+    }    
+    if ($TituloEvento !== "") {
+    $Eventos = array($Usuario, $TituloEvento, $FechaEvento,$DescripcionEvento);    
+    array_push($Data,$Eventos);
+    setcookie('Eventos',json_encode($Data));
+    header("Location: index.php");
     }
 
+    foreach ($Data as $items => $value) {
+        if ($Usuario == $value[0]) {
+            array_push($showEventos,$value);
+        }
+    }    
+    
 ?>

@@ -52,7 +52,7 @@
             ?>
             <div class="mb-3 pt-2">
                 <label for="exampleInputPassword1" class="text-white">Descripción</label>
-                <textarea name="textarea" rows="5" class="texta" name="descripcion" cols="40" placeholder="Descripción"></textarea>
+                <textarea rows="5" class="texta" name="descripcion" cols="40" placeholder="Descripción"></textarea>
                 <!-- <input type="text" class="form-control" name="descripcion" required placeholder="Descripcion"> -->
             </div>
           
