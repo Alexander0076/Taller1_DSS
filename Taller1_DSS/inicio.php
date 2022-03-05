@@ -26,7 +26,7 @@
     }
   }
   
-    var_dump($showEventos);
+    
     foreach ($showEventos as $key => $value) {
       echo "<div>
       <div>
@@ -45,9 +45,11 @@
       </div>
       </div>
       <a href='Eliminar.php?evnt=$value[1]'><button>Eliminar</button></a>
-      <a href='Actualizar.php?evnt=$value[1]'><button>Actualizar</button></a>
+      <a href='actualizar.php?evnta=$value[1]'><button>Actualizar</button></a>
       </div>";
     }
+
+    
   
   
   ?>

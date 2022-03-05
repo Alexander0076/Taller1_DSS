@@ -14,8 +14,12 @@
   include_once 'templates/nav.php';
 ?>
 <section >
+<?php        
+            $a = $_GET['evnta'];
+            $_SESSION['actualizar']=$a;
+         ?>  
     <div class="formdiv f">
-        <form class="form" method="post" action="DataActualizar.php?ac=$_GET['evnt']">
+        <form class="form" method="post" action="DataActualizar.php">
            <div class="mb-4">
                 <label for="exampleInputEmail1"  class="label">Ingrese nuevo titulo de evento: </label>
                 <input name="NTitulo" class="form-control" placeholder="Nuevo titulo" require type="text">
@@ -28,9 +32,11 @@
                 <label for="exampleInputEmail1"  class="label">Ingrese nueva descripción de evento: </label><br>
                 <textarea rows="5" class="texta form-control" name="NDescripcion" cols="94" required placeholder="Descripción"></textarea>
            </div>
+        
            <div class="d-flex justify-content-center">
             <button type="submit" class="btn-lg btn-primary rounded-pill" name="ingresar">Ingresar</button>
             </div>
+
         </form>
     </div>
 </section>
