@@ -46,13 +46,26 @@ if (isset($_COOKIE['Eventos'])) {
     if ($_SESSION['Usuario']  == $value[0]) {
         array_push($showEventos,$value);
     }
-  }   
+  }
+  
+
     foreach ($showEventos as $key => $value) {
       echo "<div>
       <div>
-        <p>Titulo eventos: $value[1]</p>
+      <div class='row'>
+      <div class='col-6'>
+      <p>Titulo evento: $value[1]</p>
+    </div>
+    <div  class='col-6'>
+      <p>Fecha de evento: $value[2]</p>
+    </div>
+    <div>
+      <p>
+      Descripción de evento: $value[3]
+      </p>
+    </div>
       </div>
-      <div></div>
+      </div>
       <a href='Eliminar.php?evnt=$value[1]'><button>Eliminar</button></a>
       <a href='Actualizar.php?evnt=$value[1]'><button>Actualizar</button></a>
       </div>";

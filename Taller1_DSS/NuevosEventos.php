@@ -20,39 +20,19 @@
             <img src="img/notebook.png" width="40%"  >
         </div>
         <form class="formularioR" method="post" action="DataEventos.php"  >
-
-            <?php
-            if(isset($errorLogin)){
-                echo "<p style= color:#f7253a;>";
-                echo $errorTitulo;
-                echo "</p>";
-            }
-            ?>
             <div class="mb-4">
                 <label for="exampleInputEmail1" class="text-white">Titulo de evento</label>
-                <input type="text" class="form-control" name="titulo" aria-describedby="emailHelp"  placeholder="Titulo de evento">
+                <input type="text" class="form-control" name="titulo" aria-describedby="emailHelp" required  placeholder="Titulo de evento">
             </div>
-            <?php
-            if(isset($errorLogin)){
-                echo "<p style= color:#f7253a;>";
-                echo $errorFecha;
-                echo "</p>";
-            }
-            ?>
+            
             <div class="mb-3 pt-2">
                 <label for="exampleInputPassword1" class="text-white">Fecha</label>
-                <input type="Date" class="form-control" name="fecha"  placeholder="Contraseña">
+                <input type="Date" class="form-control" name="fecha" required  placeholder="Contraseña">
             </div>
-            <?php
-            if(isset($errorLogin)){
-                echo "<p style= color:#f7253a;>";
-                echo $errorDes;
-                echo "</p>";
-            }
-            ?>
+            
             <div class="mb-3 pt-2">
                 <label for="exampleInputPassword1" class="text-white">Descripción</label>
-                <textarea rows="5" class="texta" name="descripcion" cols="40" placeholder="Descripción"></textarea>
+                <textarea rows="5" class="texta" name="descripcion" cols="40" required placeholder="Descripción"></textarea>
                 <!-- <input type="text" class="form-control" name="descripcion" required placeholder="Descripcion"> -->
             </div>
           
