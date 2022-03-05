@@ -6,7 +6,7 @@
     if (isset($_COOKIE['Eventos'])) {
         $Data = json_decode($_COOKIE['Eventos'],true);
     }else{
-        setcookie('Eventos',json_encode(array()),10800);
+        setcookie('Eventos',json_encode(array()));
     } 
     
     $TitEliminar = $_GET['evnt'];

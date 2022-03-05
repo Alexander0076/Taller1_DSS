@@ -9,12 +9,12 @@
     if (isset($_COOKIE['Eventos'])) {
         $Data = json_decode($_COOKIE['Eventos'],true);
     }else{
-        setcookie('Eventos',json_encode(array()),10800);
+        setcookie('Eventos',json_encode(array()));
     }    
     if ($TituloEvento !== "") {
     $Eventos = array($Usuario, $TituloEvento, $FechaEvento,$DescripcionEvento);    
     array_push($Data,$Eventos);
-    setcookie('Eventos',json_encode($Data),10800);
+    setcookie('Eventos',json_encode($Data));
     header("Location: index.php");
     }
 
