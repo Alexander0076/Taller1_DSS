@@ -108,3 +108,31 @@ ul{
   .dropdown a:hover {background-color: #ddd;}
   
   .show {display: block;}
+
+  .formdiv{
+      border: 1px solid black;
+      margin-left: 25%;
+      margin-right: 25%;
+      margin-top: 5%;
+      border-radius: 5px;
+      
+  }
+  .form{
+      margin: 4%;
+      
+  }
+  .label{
+      margin-top: 1%;
+      margin-bottom: 2%;
+      color: white;
+  }
+  .b {
+    align-items: center;
+    background: linear-gradient(#141e30, #1c66b9);
+    position: relative;
+    justify-content: center;
+    height: 100vh;
+  }
+  .f{
+    background: linear-gradient(#141e30, #243b55);
+  }

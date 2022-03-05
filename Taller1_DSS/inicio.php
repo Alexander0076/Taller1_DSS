@@ -26,7 +26,7 @@
     }
   }
   
-
+    var_dump($showEventos);
     foreach ($showEventos as $key => $value) {
       echo "<div>
       <div>
