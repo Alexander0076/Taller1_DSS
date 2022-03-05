@@ -15,7 +15,7 @@
     $Eventos = array($Usuario, $TituloEvento, $FechaEvento,$DescripcionEvento);    
     array_push($Data,$Eventos);
     setcookie('Eventos',json_encode($Data));
-    header("Location: index.php");
+    header("Location: inicio.php");
     }
 
     foreach ($Data as $items => $value) {

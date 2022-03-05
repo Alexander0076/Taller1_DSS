@@ -17,5 +17,5 @@
         }
     }
     setcookie('Eventos',json_encode($Data));
-    header("Location: index.php");
+    header("Location: inicio.php");
 ?>

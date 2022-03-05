@@ -1,7 +1,7 @@
 body {
     align-items: center;
     background: linear-gradient(#141e30, #243b55);
-    display: flex;
+    position: relative;
     justify-content: center;
     height: 100vh;
   }
@@ -22,6 +22,7 @@ body {
     height: 550px;
     padding: 20px;
     width: 350px;
+    margin: 0 auto;
   }
   .texta{
     border-radius: 5%;

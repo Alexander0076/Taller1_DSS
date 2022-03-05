@@ -17,7 +17,7 @@ foreach ($usuario_info as $key => $value) {
 }
 if($login) {
    $_SESSION['Usuario']=$userName;
-    header("Location: index.php");
+    header("Location: inicio.php");
     exit();
 } else {
     $errorLogin="Nombre de usurio o contraseña incorrecta";
